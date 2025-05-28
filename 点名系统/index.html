@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机点名系统</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-random logo-icon"></i>
+            </div>
+            <h1>随机点名系统</h1>
+            <p class="subtitle">财务管理 三班</p>
+        </header>
+        
+        <main>
+            <div class="card">
+                <div class="sound-control">
+                    <button id="soundToggle" class="sound-toggle sound-on" title="音效开关">
+                        <i class="fas fa-volume-high sound-icon"></i>
+                    </button>
+                </div>
+                
+                <div class="result-container">
+                    <div class="result-box">
+                        <div class="student-info" id="studentInfo">
+                            <div class="placeholder">点击开始按钮开始点名</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="controls">
+                    <button id="startBtn" class="btn primary">
+                        <i class="fas fa-play btn-icon"></i>
+                        开始点名
+                    </button>
+                    <button id="stopBtn" class="btn secondary" disabled>
+                        <i class="fas fa-stop btn-icon"></i>
+                        停止
+                    </button>
+                    <button id="resetBtn" class="btn secondary">
+                        <i class="fas fa-sync-alt btn-icon"></i>
+                        重置
+                    </button>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label"><i class="fas fa-users stat-icon"></i> 总人数</span>
+                        <span class="stat-value" id="totalCount">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label"><i class="fas fa-check-circle stat-icon"></i> 已点名</span>
+                        <span class="stat-value" id="calledCount">0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="history-section">
+                <h2><i class="fas fa-history"></i> 历史记录</h2>
+                <div class="history-list" id="historyList"></div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2025 随机点名系统 <i class="fas fa-code"></i> 版本 1.1.0</p>
+        </footer>
+    </div>
+    
+    <div class="decoration-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
